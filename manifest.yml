@@ -1,0 +1,7 @@
+---
+applications:
+- name: iw-test-app
+  memory: 128M
+  host: iw-test-app
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/buildpack-nodejs.git
