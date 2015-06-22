@@ -14,6 +14,9 @@ var MainService = (function () {
             use(w);
         })
             .inject(function (service, use) {
+            use(new ironworks.plugins.client(service.comm, service.who(), {}));
+        })
+            .inject(function (service, use) {
             use(new ironworks.plugins.socket(service.comm, service.who()));
         })
             .inject(function (service, use) {
